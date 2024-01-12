@@ -1,2 +1,4 @@
+# Reinforcement Learning PyGame
 
-hello
+This project was inspired by 
+
