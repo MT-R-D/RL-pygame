@@ -21,13 +21,15 @@ class Ball:
         self.y = 0
         self.x = random.randint(self.radius, screen_width - self.radius)
 
-    def move(self, screen_width, screen_height):
+    def move(self, screen_width, screen_height) -> int:
         if self.cooldown != 0:
             self.cooldown -= 1
             return
         self.y += self.speed
         if self.y >= screen_height:
             self.spawn(screen_width)
+            return -1
+        return 0
 
 
 __all__ = ['Ball']

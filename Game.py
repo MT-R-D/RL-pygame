@@ -73,7 +73,7 @@ class Game:
                             self.PLAYER_WIDTH, self.player_x)
 
         for ball in self.balls:
-            ball.move(self.SCREEN_WIDTH, self.SCREEN_HEIGHT)
+            self.score -= ball.move(self.SCREEN_WIDTH, self.SCREEN_HEIGHT)
 
             if (ball.y >= self.player_y) and (ball.x >= self.player_x and ball.x <= self.player_x + self.PLAYER_WIDTH):
                 ball.spawn(self.SCREEN_WIDTH)
